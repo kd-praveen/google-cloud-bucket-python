@@ -15,4 +15,4 @@ def delete_blob(bucket_name, blob_name):
     print(f"Blob {blob_name} deleted.")
 
 # Replace 'my-bucket' and 'my-file.txt' with your bucket name and file name
-delete_blob('jio-events', 'jpeg/wedding-image1.jpg')
+delete_blob('jio-events', 'events-1/f65f03a14a904484a00b7057f5f2653d_0266554465.jpeg')

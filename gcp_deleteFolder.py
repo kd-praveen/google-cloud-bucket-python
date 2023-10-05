@@ -6,12 +6,9 @@ os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = '/home/praveenkd/Documents/Docs/P
 
 def delete_folder(bucket_name, folder_name):
     storage_client = storage.Client()
-    bucket = storage_client.get_bucket(bucket_name)
     
     # List all objects in the folder
-    blobs = bucket.list_blobs(prefix=folder_name)
-    
-    print(blobs)
+    blobs = storage_client.list_blobs(bucket_name, prefix=folder_name)
     
     # Delete each object in the folder
     for blob in blobs:
@@ -19,4 +16,4 @@ def delete_folder(bucket_name, folder_name):
 
     print(f"Folder {folder_name} deleted.")
     
-delete_folder('jio-events', 'events-1')
+delete_folder('jio-events', 'events-9')
