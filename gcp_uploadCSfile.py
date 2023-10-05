@@ -13,6 +13,9 @@ def upload_cs_file(bucket_name, source_file_name, destination_file_name):
 
     blob = bucket.blob(destination_file_name)
     blob.upload_from_filename(source_file_name)
+    
+    # Get the URL of the uploaded file
+    # url = blob.public_url
 
     url = blob.generate_signed_url(
         # This URL will be valid for 1 hour

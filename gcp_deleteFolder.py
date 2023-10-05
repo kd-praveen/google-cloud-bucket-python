@@ -11,6 +11,8 @@ def delete_folder(bucket_name, folder_name):
     # List all objects in the folder
     blobs = bucket.list_blobs(prefix=folder_name)
     
+    print(blobs)
+    
     # Delete each object in the folder
     for blob in blobs:
         blob.delete()
